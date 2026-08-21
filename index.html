@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRO - Issues Reporting Outlet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>IRO - Issues Reporting Outlet</h1>
+        <p>Connecting AAUA Students and Host Communities</p>
+    </header>
+
+    <main class="container">
+        <section class="info-section">
+            <h2>About IRO</h2>
+            <p>IRO is a platform designed to capture, organize, and resolve issues between Adekunle Ajasin University students and indigenes of host communities including Akungba, Iwaro, Etioro, and Ayegunle.</p>
+            <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf8aNX2dDOrfUUnEmF8OFidsjF4GQxmHwbJCw6sjQKQahAjBg/formResponse" target="_blank" class="btn-external">Open Official Google Form</a>
+        </section>
+
+        <section class="form-section">
+            <h2>Submit an Issue</h2>
+            <form id="iroForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="userType">Category</label>
+                    <select id="userType" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="Student">AAUA Student</option>
+                        <option value="Indigene">Community Indigene</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location / Community</label>
+                    <select id="location" required>
+                        <option value="">-- Select Location --</option>
+                        <option value="AAUA Campus">AAUA Campus</option>
+                        <option value="Akungba">Akungba</option>
+                        <option value="Iwaro">Iwaro</option>
+                        <option value="Etioro">Etioro</option>
+                        <option value="Ayegunle">Ayegunle</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Issue Type</label>
+                    <select id="category" required>
+                        <option value="">-- Select Issue Type --</option>
+                        <option value="Security">Security Concern</option>
+                        <option value="Infrastructure">Infrastructure / Housing</option>
+                        <option value="Welfare">Welfare / Prices</option>
+                        <option value="Dispute">Community Dispute</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Issue Description</label>
+                    <textarea id="description" rows="4" required placeholder="Describe the issue in detail..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Report</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Submitted Issues Log</h2>
+            <table id="issuesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>IRO-101</td>
+                        <td>Adebayo Samuel</td>
+                        <td>Student</td>
+                        <td>Akungba</td>
+                        <td>Security</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
